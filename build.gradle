@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'ch.cern.cms.spartan'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation files('libs/maria-commons-1.0.0.jar')
+    implementation files('libs/maria-boot-1.0.0.jar')
+
+
+    implementation 'io.javalin:javalin:3.7.0'
+    implementation 'org.eclipse.jetty:jetty-server:9.0.0.RC0'
+
+    implementation 'org.json:json:20180813'
+    implementation 'org.quartz-scheduler:quartz:2.3.0'
+    implementation 'org.yaml:snakeyaml:1.25'
+    implementation 'org.apache.commons:commons-lang3:3.8.1'
+    implementation 'org.apache.commons:commons-pool2:2.11.1'
+
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation 'net.sourceforge.argparse4j:argparse4j:0.8.1'
+    implementation 'com.sumologic.plugins.log4j:sumo-log4j-appender:2.12'
+}
+
+test {
+    useJUnitPlatform()
+}
